@@ -1,0 +1,25 @@
+﻿@model OrchardCore.ProductModule.Models.ProductMainModel
+
+@using (Html.BeginForm("SendDataToPgl", "Product", FormMethod.Post)) {
+
+
+    <div class="form-group">
+        <label for="productname" class="control-label col-xs-4">product name</label>
+        <div class="col-xs-8">
+            @Html.TextBoxFor(x => x.ProductName, null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="productprice" class="control-label col-xs-4">product price</label>
+        <div class="col-xs-8">
+            @Html.TextBoxFor(x => x.ProductPrice, null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-offset-4 col-xs-8">
+            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+
+}
